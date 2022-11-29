@@ -1,33 +1,31 @@
-// cretae a username_pass_with_while. 
+#include <stdio.h>
+#include <string.h>
+#define user "arif"
+#define pass "123Pass!"        
+int main()
+{
+    char username[20], password[20];
 
+    //-----LOGIN PHASE-----
+    printf("Please Enter username:");
+    scanf("%s", &username);
 
-#include "stdio.h"
-#include "stdlib.h"
-#include "string.h"
-#include "ctype.h" // for isdigit()
+    printf("\nPlease enter password:");
+    scanf("%s", &password);
+    
+    
 
-int main() {
-    char username[20];
-    char password[20];
-    char username1[20];
-    char password1[20];
-    int i = 0;
-    printf("Enter your username: ");
-    scanf("%s", username);
-    printf("Enter your password: ");
-    scanf("%s", password);
-    while (i < 3) {
-        printf("Enter your username: ");
-        scanf("%s", username1);
-        printf("Enter your password: ");
-        scanf("%s", password1);
-        if (strcmp(username, username1) == 0 && strcmp(password, password1) == 0) {
-            printf("You are logged in");
-            break;
-        } else {
-            printf("Wrong username or password");
-            i++;
-        }
-    }
-    return 0;
-}
+        printf("Wrong username or password try again!\n");
+
+        printf("\nPlease Enter username:");
+        scanf("%s", &username);
+
+        printf("\nPlease enter password:");
+        scanf("%s", &password);
+
+    
+    while (strcmp(username, user) != 0 && strcmp(password, pass) != 0);
+
+    printf("Correct username and password.\n\nWelcome Mrs.arif!\n\nWhat would you like to do?");
+    //-----END OF LOGIN PHASE-----
+    return 0;}
